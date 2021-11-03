@@ -7,13 +7,6 @@ import logging
 import os
 import sys
 
-debug               = 3                                             # global variables
-log                 = logging.getLogger(__name__)                   # logging
-if debug > 2:
-  logging.basicConfig(level=logging.DEBUG)
-elif debug > 1:
-  logging.basicConfig(level=logging.INFO)
-
 @dataclass
 class X:
   i: int
