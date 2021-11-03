@@ -1,0 +1,37 @@
+...
+Traceback (most recent call last):
+  File "/home/user/.local/bin/mkdocs", line 8, in <module>
+    sys.exit(cli())
+  File "/home/user/.local/lib/python3.9/site-packages/click/core.py", line 1137, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/user/.local/lib/python3.9/site-packages/click/core.py", line 1062, in main
+    rv = self.invoke(ctx)
+  File "/home/user/.local/lib/python3.9/site-packages/click/core.py", line 1668, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/user/.local/lib/python3.9/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/user/.local/lib/python3.9/site-packages/click/core.py", line 763, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/user/.local/lib/python3.9/site-packages/mkdocs/__main__.py", line 173, in serve_command
+    serve.serve(dev_addr=dev_addr, livereload=livereload, **kwargs)
+  File "/home/user/.local/lib/python3.9/site-packages/mkdocs/commands/serve.py", line 54, in serve
+    config = builder()
+  File "/home/user/.local/lib/python3.9/site-packages/mkdocs/commands/serve.py", line 49, in builder
+    build(config, live_server=live_server, dirty=dirty)
+  File "/home/user/.local/lib/python3.9/site-packages/mkdocs/commands/build.py", line 249, in build
+    config = config['plugins'].run_event('config', config)
+  File "/home/user/.local/lib/python3.9/site-packages/mkdocs/plugins.py", line 94, in run_event
+    result = method(item, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/mkdocs_macros/plugin.py", line 502, in on_config
+    self._load_modules()
+  File "/usr/local/lib/python3.9/dist-packages/mkdocs_macros/plugin.py", line 388, in _load_modules
+    self._load_module(module, local_module_name)
+  File "/usr/local/lib/python3.9/dist-packages/mkdocs_macros/plugin.py", line 336, in _load_module
+    module.define_env(self)
+  File "/home/user/Top10/2021/dict_2_dataclass_mkdocs.py", line 25, in define_env
+    result = from_dict(Y, d)
+  File "/usr/local/lib/python3.9/dist-packages/dacite/core.py", line 46, in from_dict
+    data_class_hints = get_type_hints(data_class, globalns=config.forward_references)
+  File "/usr/lib/python3.9/typing.py", line 1408, in get_type_hints
+    base_globals = sys.modules[base.__module__].__dict__
+KeyError: 'dict_2_dataclass_mkdocs'
